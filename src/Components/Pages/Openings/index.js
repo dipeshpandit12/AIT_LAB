@@ -1,4 +1,4 @@
-import ProfileCard from "../Other/ProfileCard";
+import ProfileCard from "./ProfileCard";
 import {
   Heading,
   Text,
@@ -6,15 +6,20 @@ import {
   ListItem,
   Box,
   SimpleGrid,
-  Link
+  Link,
 } from "@chakra-ui/react";
-import Students_Datas from "../../Datas/Students_Datas.json";
+import Students_Datas from "../../../Datas/Students_Datas.json";
 
-export default function Teams() {
+export default function Openings() {
   return (
     <>
-      <Box pb="3rem" fontSize={{base:"sm",md:"sm",lg:"md",xl:"md"}} mt="3rem" fontFamily="Montserrat,Helvetica Neue,Helvetica,Arial,Lucida Grande,-apple-system,sans-serif">
-        <Heading size="lg" pb="1rem" >
+      <Box
+        pb="3rem"
+        fontSize={{ base: "sm", md: "sm", lg: "md", xl: "md" }}
+        mt="3rem"
+        fontFamily="Montserrat,Helvetica Neue,Helvetica,Arial,Lucida Grande,-apple-system,sans-serif"
+      >
+        <Heading size="lg" pb="1rem">
           Hiring !!!
         </Heading>
         <Text
@@ -33,14 +38,17 @@ export default function Teams() {
         <List
           fontWeight={350}
           pb="2rem"
-          textIndent= {{md:"1rem",lg:"4rem",xl:"4rem"}}
-          fontStyle= 'italic'
+          textIndent={{ md: "1rem", lg: "4rem", xl: "4rem" }}
+          fontStyle="italic"
         >
           <ListItem>1.Assist in writing literature review</ListItem>
           <ListItem>2.Develop spatiotemporal models</ListItem>
           <ListItem>3.Apply different AI algorithms</ListItem>
           <ListItem>4.Maintain codes and repositories in GitHub</ListItem>
-          <ListItem>5.Build and maintain complex web applications for real-time spatiotemporal data stream</ListItem>
+          <ListItem>
+            5.Build and maintain complex web applications for real-time
+            spatiotemporal data stream
+          </ListItem>
         </List>
         <Text
           pl={{ base: "0.5rem", md: "1.5rem", lg: "1rem", xl: "1rem" }}
@@ -59,11 +67,17 @@ export default function Teams() {
         </Text>
       </Box>
       <Box pb="2rem">
-        <Heading size="lg" pb="2rem"  >
+        <Heading size="lg" pb="2rem">
           Current and Former Members
         </Heading>
         <Box pb="3rem">
-          <Heading as="h1" size="md" pb="2rem"  fontWeight={700} pl={{ base: "0.5rem", md: "1.5rem", lg: "0.5rem", xl: "0.5rem" }}>
+          <Heading
+            as="h1"
+            size="md"
+            pb="2rem"
+            fontWeight={700}
+            pl={{ base: "0.5rem", md: "1.5rem", lg: "0.5rem", xl: "0.5rem" }}
+          >
             Postdoctoral Research Associates
           </Heading>
           <SimpleGrid
