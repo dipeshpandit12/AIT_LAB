@@ -21,6 +21,7 @@ const theme = extendTheme({
       // Default text color for all elements
       body: {
         color: "#2C3E50",
+       fontFamily:"'Poppins', sans-serif"
       },
 
       header: {
