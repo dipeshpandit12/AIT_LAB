@@ -1,6 +1,4 @@
-import { Card,CardBody,Image,Text, Heading,Stack, CardFooter, IconButton, Link, HStack, VStack} from '@chakra-ui/react';
-import { FaLinkedin } from 'react-icons/fa';
-import { EmailIcon } from '@chakra-ui/icons';
+import { Card,CardBody,Image,Text, Heading,Stack, CardFooter,VStack} from '@chakra-ui/react';
 import { useState } from 'react';
 
 function ProfileCard({ link }) {
@@ -9,68 +7,44 @@ function ProfileCard({ link }) {
 
   const truncateText = (text) => {
     if (text.length > 18) {
-      return text.substring(0, 17) + '..';
+      return text.substring(0, 14) + '..';
     }
     return text;
   };
 
   return (
     <Card
-    minH="17rem"
+    minH="20rem"
     minW="15rem"
     maxW="16rem"
-    maxH="19rem"
+    maxH="21rem"
     direction={{ base: 'column', sm: 'row' }}
     overflow="hidden"
     border="none"
     variant="outline"
-    // borderRadius="1.5rem"
-    // borderBottom="4px"
-    // borderColor="#2C3E50"
     backgroundColor="transparent"
   >
     <Stack spacing={0}>
-      <CardBody padding={0}>
+      <CardBody padding={0} overflow="hidden">
         <Image
           width="100%"
           objectFit="cover"
           src={link.profilePicture? link.profilePicture: 'https://www.shutterstock.com/image-vector/unknown-person-hidden-covered-masked-260nw-1552977773.jpg'}
           style={{
             transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-            transition: 'transform 0.3s ease', // Smooth transition effect
+            transition: 'transform 0.3s ease',
           }}
-          onMouseEnter={() => setIsHovered(true)} // Set hover state to true
-          onMouseLeave={() => setIsHovered(false)} // Set hover state to false
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           alt="Profile Image"
         />
       </CardBody>
-        {/* <CardFooter alignContent="center" justifyItems="left">
-            <VStack spacing={0}>
-                <Heading fontSize="1.5rem" fontWeight={550} pb="0.2rem">{truncateText(link.name)}</Heading>
-                <Text fontSize="1.8rem"  fontWeight={50} >{truncateText(link.department)}</Text>
-                <Text fontSize="1;3rem"  fontWeight={50} >{truncateText(link.institution)} , {link.years}</Text>
-                   <HStack spacing={4} alignContent="center" justifyContent="center" pt="0">
-                    <Link href={`mailto:${link.email}`} isExternal>
-                      <IconButton
-                        icon={<EmailIcon />}
-                        aria-label="Send Email"
-                        variant="ghost"
-                        colorScheme="blue"
-                      />
-                    </Link>
-                    <Link href={link.linkedinProfile} isExternal>
-                      <IconButton
-                        icon={<FaLinkedin />}
-                        aria-label="LinkedIn Profile"
-                        variant="ghost"
-                        colorScheme="blue"
-                      />
-                    </Link>
-            </HStack>
-            </VStack>
-        </CardFooter> */}
-      <Heading fontSize="1.5rem" fontWeight={550} pb="0.2rem">{truncateText(link.name)}</Heading>
-      <Text fontSize="1.8rem"  fontWeight={50} >{truncateText(link.department)}</Text>
+      <CardFooter px="0.5rem">
+          <VStack alignItems="left" spacing={0}>
+          <Heading fontSize="1.5rem" fontWeight={550}>{truncateText(link.name)}</Heading>
+          <Text fontSize="1rem"  fontWeight={50}>{truncateText(link.department)}</Text>
+        </VStack>
+      </CardFooter>
     </Stack>
     </Card>
   );

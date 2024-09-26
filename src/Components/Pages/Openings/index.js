@@ -7,7 +7,6 @@ import {
   Box,
   SimpleGrid,
   Link,
-  Flex,
 } from "@chakra-ui/react";
 import Students_Datas from "../../../Datas/Students_Datas.json";
 
@@ -18,10 +17,9 @@ export default function Openings() {
         pb="3rem"
         fontSize={{ base: "sm", md: "sm", lg: "md", xl: "md" }}
         mt="3rem"
-        fontFamily="Montserrat,Helvetica Neue,Helvetica,Arial,Lucida Grande,-apple-system,sans-serif"
       >
         <Heading size="lg" pb="1rem">
-          Hiring !!!
+          If you’re interested in joining, do check out the opportunity !
         </Heading>
         <Text
           pb="1rem"
@@ -30,11 +28,11 @@ export default function Openings() {
         >
           The Ingram School of Engineering (ISOE) invites applications for
           several highly motivated M.S./Ph.D. GIA/GRA positions under the
-          supervision of Dr. Subasish Das in the Civil Engineering program. The
+          supervision of Dr. Subasish Das in the Civil Engineering program.<b><br></br><br></br> The
           prospective student will focus on combination of three research
-          thrusts: 1) causal artificial intelligence, 2) advanced spatiotemporal
-          modeling, and 3) transportation safety and operation. The
-          responsibilities of the GRA include:
+          thrusts: </b><br></br><br></br>1) causal artificial intelligence,<br></br> 2) advanced spatiotemporal
+          modeling, <br></br> 3) transportation safety and operation.<b><br></br><br></br> The
+          responsibilities of the GRA include:</b><br></br>
         </Text>
         <List
           fontWeight={350}
@@ -51,11 +49,10 @@ export default function Openings() {
             spatiotemporal data stream
           </ListItem>
         </List>
-        <Text
-          pl={{ base: "0.5rem", md: "1.5rem", lg: "1rem", xl: "1rem" }}
-          textAlign="justify"
-        >
-          Please see the pdf for the open position of{" "}
+        <Heading size="sm" pb="1rem">
+          Current Opportunties :
+        </Heading>
+          {" "}
           <Link
             href="https://subasish.github.io/ait_lab/pdfs/GRA_Position%20Details_Fall22.pdf"
             fontWeight="600"
@@ -64,8 +61,6 @@ export default function Openings() {
           >
             Ph.D. GRA
           </Link>
-          .
-        </Text>
       </Box>
       <Box pb="2rem">
         <Heading size="lg" pb="2rem">
