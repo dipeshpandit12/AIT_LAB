@@ -7,12 +7,13 @@ import {
   Box,
   SimpleGrid,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 import Students_Datas from "../../../Datas/Students_Datas.json";
 
 export default function Openings() {
   return (
-    <>
+    <Box px={{base:"0rem",md:"2rem",lg:"3rem",xl:"4rem"}}>
       <Box
         pb="3rem"
         fontSize={{ base: "sm", md: "sm", lg: "md", xl: "md" }}
@@ -81,9 +82,9 @@ export default function Openings() {
             Postdoctoral Research Associates
           </Heading>
           <SimpleGrid
-            columns={{ base: 2, md: 3, lg: 4, xl: 5 }}
-            spacing={5}
-            pl={{ base: "0rem", md: "1.5rem", lg: "2rem", xl: "2rem" }}
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
+            spacing={6}
+            justifyItems="center"
           >
             {Students_Datas.postdoctoralResearchAssociates.map(
               (student, index) => (
@@ -98,9 +99,9 @@ export default function Openings() {
             PhD Students
           </Heading>
           <SimpleGrid
-            columns={{ base: 2, md: 3, lg: 4, xl: 5 }}
-            spacing={5}
-            pl={{ base: "0rem", md: "1.5rem", lg: "2rem", xl: "2rem" }}
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
+            spacing={6}
+            justifyItems="center"
           >
             {Students_Datas.phdStudents.map((student, index) => (
               <ProfileCard key={index} link={student} />
@@ -113,9 +114,9 @@ export default function Openings() {
             M.S. Students
           </Heading>
           <SimpleGrid
-            columns={{ base: 2, md: 3, lg: 4, xl: 5 }}
-            spacing={5}
-            pl={{ base: "0rem", md: "1.5rem", lg: "2rem", xl: "2rem" }}
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
+            spacing={6}
+            justifyItems="center"
           >
             {Students_Datas.msStudents.map((student, index) => (
               <ProfileCard key={index} link={student} />
@@ -128,9 +129,9 @@ export default function Openings() {
             Undergraduate Students
           </Heading>
           <SimpleGrid
-            columns={{ base: 2, md: 3, lg: 4, xl: 5 }}
-            spacing={5}
-            pl={{ base: "0rem", md: "1.5rem", lg: "2rem", xl: "2rem" }}
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
+            spacing={6}
+            justifyItems="center"
           >
             {Students_Datas.undergraduateStudents.map((student, index) => (
               <ProfileCard key={index} link={student} />
@@ -138,6 +139,6 @@ export default function Openings() {
           </SimpleGrid>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 }
