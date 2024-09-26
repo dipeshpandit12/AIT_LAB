@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AIT_LAB/static/css/main.a240c550.css",
-    "main.js": "/AIT_LAB/static/js/main.026c85c4.js",
+    "main.js": "/AIT_LAB/static/js/main.0f1d195e.js",
     "static/js/453.8ab44547.chunk.js": "/AIT_LAB/static/js/453.8ab44547.chunk.js",
     "index.html": "/AIT_LAB/index.html",
     "main.a240c550.css.map": "/AIT_LAB/static/css/main.a240c550.css.map",
-    "main.026c85c4.js.map": "/AIT_LAB/static/js/main.026c85c4.js.map",
+    "main.0f1d195e.js.map": "/AIT_LAB/static/js/main.0f1d195e.js.map",
     "453.8ab44547.chunk.js.map": "/AIT_LAB/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a240c550.css",
-    "static/js/main.026c85c4.js"
+    "static/js/main.0f1d195e.js"
   ]
 }
